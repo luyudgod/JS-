@@ -35,6 +35,7 @@
      for(a,b,c){} a为循环执行前执行 b为循环中执行 也是for的条件判断 为ture时执行 为flase时停止 c为执行完一个周期时执行 后跟执行代码块
      for a in b 一般为遍历对象或者数组时应用的  我的理解是 a可以是执行次数记录 也可是内容的记录 而b为被执行的对象或数组
      while true  while循环 根据后面的条件表达式的值来决定是否执行循环操作 do while 和while差不多 不过要在判断前执行一次代码，然后再进行条件判断来决定是否再次执行
+     特殊语句：continue  用来跳过一次循环迭代 break 用来跳过当前循环（如果未有标签的情况下）
  
 8.创建函数
      函数（function） 比较重要的一环 函数的形参 返回值 调用 作用域  
@@ -57,13 +58,30 @@
                    this.d=function(){}
                            //此为注释  this在这里指向本函数的形参 外部的话指向window的属性
                            }
-10.
+10.JS中的严格模式
+   严格模式中未声明的变量 直接赋值会被系统报错 返回:a is not defined
+
+11.验证API
+   验证输入的内容是否合法
+   验证输入内容的类型 长度 大小
+   验证方法有很多种
+
+12.表单验证
+   document.froms.value["frome表单name"]["表单下的属性name"] 可以用来取值来做判断 表单里的这个值是否为可用
+   a = document.froms.value["a"]["b"]
+   function a(){if(a!==null || a!==undefined || a!=="" || isNaN(a)){
+          alert("符合所有条件")
+          return true
+   }else return flase;}
+   onsubitm return a()
+13.作用域
+   let 可用来更改变量的作用域
+   所有函数内部共用一个内部作用域
+
+14.
 
 
 
 
 
-
-
-
-
+//以上有很多需要补充的 大多数时间都在实践 所以很多东西都是根据我的记忆来写的，很零碎！！！
